@@ -1,0 +1,8 @@
+*.log
+target/
+snapshots/
+.vscode/
+
+.DS_Store
+.venv/
+
