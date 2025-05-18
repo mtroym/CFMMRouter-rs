@@ -200,7 +200,7 @@ impl ObjectiveFunction for MaximizeToken {
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::types::{Token, Price};
+    use crate::types::{Token};
     use std::collections::HashMap;
 
     #[test]

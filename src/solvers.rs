@@ -165,10 +165,9 @@ pub fn minimize_scalar_function(
 #[cfg(test)]
 mod tests {
     use super::*;
-    use crate::types::{Token, DualVariables, Result as CfmrResult};
+    use crate::types::{Token, Result as CfmrResult};
     use std::collections::HashMap;
     use ndarray::array; // For creating arrays in tests if needed
-    use approx::AbsDiffEq; // For float comparisons in tests
 
     struct SimpleQuadraticProblem {
         a: f64,
@@ -218,7 +217,7 @@ mod tests {
         let inner_problem = SimpleQuadraticProblem { a: 3.0, b: 4.0, token_x: token_x.clone(), token_y: token_y.clone() };
         let token_order = vec![token_x.clone(), token_y.clone()];
 
-        let mut transformed_problem = TransformedArgminProblem {
+        let transformed_problem = TransformedArgminProblem {
             inner_problem: &inner_problem,
             token_order: &token_order,
         };
