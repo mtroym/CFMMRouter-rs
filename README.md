@@ -1,4 +1,8 @@
+
+
 # CFMM Router RS
+
+[![Rust](https://github.com/mtroym/CFMMRouter-rs/actions/workflows/rust.yml/badge.svg)](https://github.com/mtroym/CFMMRouter-rs/actions/workflows/rust.yml)
 
 `cfmm_router_rs` is a Rust library for optimal routing of trades across a network of Constant Function Market Makers (CFMMs). It is inspired by the functionality of the Julia library `CFMMRouter.jl`. The primary goal is to find the sequence of trades that maximizes a user-defined objective function, such as arbitrage profit against a set of reference prices or maximizing the amount of a specific token received.
 
