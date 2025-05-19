@@ -4,13 +4,14 @@ version = "0.1.0"
 edition = "2021"
 
 [dependencies]
-# lbfgsb = { git = "https://github.com/ybyygu/rust-lbfgsb.git", branch = "master" }
-# lbfgsb-sys = { git = "https://github.com/noshu/lbfgsb-sys.git" }
 argmin = "0.10.0" 
 argmin-math = { version = "0.4.0", features = ["ndarray_latest"] }
 ndarray = "0.15.6"
-accelerate-src = "0.3.2" # For BLAS support on macOS via Accelerate framework
 ndarray-linalg = { version = "0.16.0", default-features = false, features = ["openblas-static"] }
+
+[target.'cfg(target_os = "macos")'.dependencies]
+accelerate-src = "0.3.2" # For BLAS support on macOS via Accelerate framework
+
 
 [lib]
 path = "src/lib.rs"
